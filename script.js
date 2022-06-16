@@ -44,16 +44,15 @@ async function start() {
 
 function loadLabeledImages() {
   const labels = [
-    "Brack Ubama",
+    "Barack",
   ];
   return Promise.all(
     labels.map(async (label) => {
       const descriptions = [];
       //for (let i = 1; i <= 2; i++) {
       const img = await faceapi.fetchImage(
-        "https://raw.githubusercontent.com/HeshamShaarawy/SimpleFaceRecognition/master/baracktest.jpeg"
-
-          // `https://raw.githubusercontent.com/WebDevSimplified/Face-Recognition-JavaScript/master/labeled_images/${label}/${i}.jpg`
+      
+         `https://raw.githubusercontent.com/HeshamShaarawy/FaceRecognitionSimple/main/labeled_images/${label}/${i}.jpg`
         );
         const detections = await faceapi
           .detectSingleFace(img)
